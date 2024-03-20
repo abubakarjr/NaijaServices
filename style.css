@@ -14,17 +14,17 @@
   }
 
   h1 {
-    margin: 0;
+    margin: 5px;
   }
 
   h2 {
-    margin-top: 0;
+    margin: 5px;
     text-align: center;
   }
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 10px;
   }
 
@@ -35,29 +35,81 @@
     text-align: center;
     color: #004d00;
     background-color: #fff;
+    height: 72vh;
   }
 
-  img {
-    max-width: 100%;
-    height: auto;
+  .card img {
+    width: auto;
+    height: 70px;
+    margin: 0;
+    padding: 0;
   }
 
-  .grid-button {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background: #004d00;
-    color: #FFF;
-    text-decoration: none;
-    border: solid 2px;
+  .card-scroll {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    /* Set a fixed height for scrolling */
+    max-height: 500px;
+    overflow-y: auto;
+  
+    /* Use flexbox for the form layout */
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+    flex: 1; /* Take full width within the flex container */
+  }
+  
+  input,
+  select,
+  button {
+    width: calc(55% - 15px); /* Adjust width as needed and account for margins */
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    transition: background 0.3s;
+    box-sizing: border-box;
+  }
+  
+  select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('https://cdn.iconscout.com/icon/free/png-256/chevron-down-4-507818.png') no-repeat right center/20px;
   }
 
-  .grid-button:hover {
-    background: #031c3e;
+  input[type="date"] {
+    padding-right: 30px;
   }
-
+  
+  button {
+    background-color: #004d00;
+    color: #fff;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #031c3e;
+  }
+  
 
 body{
     padding: 0;
@@ -90,42 +142,107 @@ body{
     background-color: #004d00;
     border: solid 5px #008000;
 
-
 }
 
 
 .aside1, .aside2{
-   height: 74.5vh;
+  height: 74.5vh;
   color: #FFF;
   background-color: #008000;
   border: solid 5px #004d00;
-
 }
 
- @media all and (min-width: 800px){
-    .main{
-        flex: 6;
-    }
+/* form {
+  height: fit-content;
+  width: fit-content;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+} */
 
-    .aside1{
-        order: 1;
-    }
+/* label {
+  display: block;
+  margin-bottom: 8px;
+} */
 
-    .aside2{
-        order: 2;
-    }
+/* input,
+select {
+  width: 90%;
+  height: 5px;
+  padding: 10px;
+  margin: 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
-    .main{
-        order: 2;
-    }
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+  background: url('https://cdn.iconscout.com/icon/free/png-256/chevron-down-4-507818.png') no-repeat right center/20px;
+} */
 
-    .footer{
-        order: 4;
-    }
- }
+/* input[type="submit"] {
+  background-color: #004d00;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} */
 
- @media all and (min-width: 600px){
-    .aside{
-        flex: 1;
-    }
- }
+/* input[type="submit"]:hover {
+  background-color: #031c3e;
+} */
+
+
+/* Tablet Styles */
+@media all and (min-width: 600px) and (max-width: 799px) {
+  .main {
+      font-size: 20px;
+  }
+
+  .grid {
+      grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+      grid-gap: 8px;
+  }
+
+  .card {
+      height: 72vh;
+  }
+}
+
+/* PC Styles */
+@media all and (min-width: 800px) and (max-width: 1023px) {
+  .main {
+      font-size: 22px;
+  }
+
+  .grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-gap: 10px;
+  }
+
+  .card {
+      height: 72vh;
+  }
+}
+
+/* Mobile Styles */
+@media all and (max-width: 599px) {
+  .main {
+      font-size: 18px;
+  }
+
+  .grid {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 6px;
+  }
+
+  .card {
+      height: 72vh;
+  }
+}

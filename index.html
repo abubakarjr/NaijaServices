@@ -3,48 +3,126 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NaijaServices</title>
+    <title>9ja-e-Services</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="wrapper">
-
       <header class="header">
-        <h1>NAIJA SERVICES</h1>
+        <h1>9JA eSERVICES</h1>
       </header>
 
       <article class="main scrollable-container">
         <div class="grid">
           <div class="card">
-            <figure>
-                <img src=""
-                />
-              </figure>
-            </figure>
-            <h2>NIN</h2>
-            <p>
-              Suspendisse sit amet tortor sodales, semper ipsum sed, pretium
-              erat. Vivamus in mollis elit.
-            </p>
-            <a class="grid-button" href="#">Learn More</a>
-          </div>
-          <div class="card">
-            <figure>
-              <img src=""
+            <img
+              src="/resources/Images/nimc-logo1-removebg-preview.png"
+              alt="NIMC Logo"
+            />
+            <form class="card-scroll">
+              <!-- <h2>NIMC SERVICES</h2> -->
+              <select>
+                <option value="option0" selected>Select Service</option>
+                <option value="option1">Date of Birth Modification</option>
+                <option value="option2">Name Modification</option>
+                <option value="option3">Phone Number Modification</option>
+                <option value="option4">Address Modification</option>
+                <option value="optionAll">All Fields</option>
+                <option value="option5">Internal Error</option>
+                <option value="option6">Validation/Verification</option>
+                <option value="option7">NIN Slip Printing</option>
+                <option value="option8">
+                  Plastic National ID Card Printing
+                </option>
+                <option value="option9">NIN Retrieval</option>
+                <option value="option10">Other Services</option>
+                <option value="option11">NIN Validation</option>
+                <option value="option12">IPE Clearance</option>
+              </select>
+              <label for="nin"></label>
+              <input
+                type="text"
+                id="nin"
+                name="nin"
+                placeholder="Enter your NIN"
+                required
               />
-            </figure>
-            <h2>BVN</h2>
-            <p>
+              <label for="surname"></label>
+              <input
+                type="text"
+                id="surname"
+                name="surname"
+                placeholder="Enter your surname"
+                required
+              />
+
+              <label for="middleName"></label>
+              <input
+                type="text"
+                id="middleName"
+                name="middleName"
+                placeholder="Enter your middle name"
+              />
+
+              <label for="firstName"></label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Enter your first name"
+                required
+              />
+              <label for="phoneNumber"></label>
+              <input
+                type="tel"
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="Enter your phone number"
+                required
+              />
+              <label for="dob"></label>
+              <input type="date" id="dob" name="dob" required />
+              <label for="state"></label>
+              <input
+                type="text"
+                id="state"
+                name="state"
+                placeholder="Enter your state"
+                required
+              />
+
+              <label for="lga"></label>
+              <input
+                type="text"
+                id="lga"
+                name="lga"
+                placeholder="Enter your LGA"
+                required
+              />
+              <label for="address"></label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Enter your address"
+                required
+              />
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div class="card">
+            <img
+              src="/resources/Images/bvn-logo1-removebg-preview.png"
+              alt=""
+            />
+            <!-- <h2>BVN</h2> -->
+            <!-- <p>
               Suspendisse sit amet tortor sodales, semper ipsum sed, pretium
               erat. Vivamus in mollis elit.
             </p>
-            <a class="grid-button" href="#">Learn More</a>
+            <a class="grid-button" href="#">Learn More</a> -->
           </div>
           <div class="card">
-            <figure>
-                <img src=""
-                />
-              </figure>
             <h2>CLASSIFIED</h2>
             <p>
               Suspendisse sit amet tortor sodales, semper ipsum sed, pretium
@@ -53,11 +131,6 @@
             <a class="grid-button" href="#">Learn More</a>
           </div>
           <div class="card">
-            <figure>
-                <img src=""
-                />
-              </figure>
-            </figure>
             <h2>SIM SWAP</h2>
             <p>
               Suspendisse sit amet tortor sodales, semper ipsum sed, pretium
@@ -66,10 +139,6 @@
             <a class="grid-button" href="#">Learn More</a>
           </div>
           <div class="card">
-            <figure>
-                <img src=""
-                />
-              </figure>
             <h2>JAMB/SSCE</h2>
             <p>
               Suspendisse sit amet tortor sodales, semper ipsum sed, pretium
@@ -78,10 +147,6 @@
             <a class="grid-button" href="#">Learn More</a>
           </div>
           <div class="card">
-            <figure>
-                <img src=""
-                />
-              </figure>
             <h2>DATA</h2>
             <p>
               Suspendisse sit amet tortor sodales, semper ipsum sed, pretium
@@ -92,18 +157,19 @@
         </div>
       </article>
 
-      <aside class="aside aside1">
+      <!-- <aside class="aside aside1">
         <h1>ASIDE 1</h1>
       </aside>
 
       <aside class="aside aside2">
         <h1>ASIDE 2</h1>
-      </aside>
+      </aside> -->
 
       <footer class="footer">
         <h1>FOOTER</h1>
       </footer>
-
     </div>
+
+    <script src="/script.js"></script>
   </body>
 </html>
